@@ -110,67 +110,21 @@ class _SigninScreenState extends State<SigninScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 24),
 
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.06,
-                child: TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.grey.shade200,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide.none,
-=========
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  width: 158,
-                  height: 60,
-                  child: Card(
-                    color: Colors.grey.shade200,
-                    elevation: 0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset("assests/images/fb.png", width: 30, height: 30),
-                        Text("Facebook", style: TextStyle(fontSize: 17.5)),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 158,
-                  height: 60,
-                  child: Card(
-                    color: Colors.grey.shade200,
-                    elevation: 0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset("assets/images/google.png", width: 30, height: 30),
-                        Text("Google", style: TextStyle(fontSize: 17.5)),
-                      ],
->>>>>>>>> Temporary merge branch 2
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 8),
               Align(
                 alignment: Alignment.centerRight,
-                child: Text(
-                  "Forget Password?",
-                  style: TextStyle(color: Colors.grey.shade600),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/forgotPassword");
+                  },
+
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(color: Colors.grey.shade600),
+                  ),
                 ),
               ),
-              SizedBox(height: 24),
-
+              SizedBox(height: 10),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.06,
 
