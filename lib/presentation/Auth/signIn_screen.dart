@@ -12,29 +12,31 @@ class _SigninScreenState extends State<SigninScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: 50),
-            Image.asset("images/Wave.png"),
-            SizedBox(height: 30),
-            Text(
-              "Sign In",
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueAccent,
+      body: Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 50),
+              Image.asset("images/Wave.png"),
+              SizedBox(height: 30),
+              Text(
+                "Sign In",
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blueAccent,
+                ),
               ),
-            ),
-            SizedBox(height: 16),
-            Text(
-              "It was popularised in the 1960s with the release of\nLetraset sheetscontaining Lorem Ipsum.",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey, fontSize: 16),
-            ),
-            SizedBox(height: 24),
+              SizedBox(height: 16),
+              Text(
+                "It was popularised in the 1960s with the release of\nLetraset sheetscontaining Lorem Ipsum.",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+              SizedBox(height: 24),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -50,7 +52,7 @@ class _SigninScreenState extends State<SigninScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset("assests/images/fb.png", width: 30, height: 30),
+                        Image.asset("images/fb.png", width: 30, height: 30),
                         Text("Facebook", style: TextStyle(fontSize: 17.5)),
                       ],
                     ),
@@ -66,7 +68,7 @@ class _SigninScreenState extends State<SigninScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset("assets/images/google.png", width: 30, height: 30),
+                        Image.asset("images/google.png", width: 30, height: 30),
                         Text("Google", style: TextStyle(fontSize: 17.5)),
                       ],
                     ),
@@ -102,19 +104,53 @@ class _SigninScreenState extends State<SigninScreen> {
             ),
             SizedBox(height: 24),
 
-            Container(
-              height: 60,
-              width: MediaQuery.of(context).size.width * 0.95,
-              decoration: BoxDecoration(
-                color: Colors.grey.shade200,
-                borderRadius: BorderRadius.circular(20),
-              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.06,
 
-              child: TextField(
-                decoration: InputDecoration(border: InputBorder.none),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    backgroundColor: Colors.blueAccent,
+                  ),
+                  onPressed: () {},
+                  child: Center(
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 16),
+
+              Align(
+                alignment: AlignmentGeometry.centerLeft,
+                child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "Don't have an account?",
+                        style: TextStyle(color: Colors.black, fontSize: 16),
+                      ),
+                      TextSpan(
+                        text: " SignUp",
+                        style: TextStyle(
+                          color: Colors.blueAccent,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
