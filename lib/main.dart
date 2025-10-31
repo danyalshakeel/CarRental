@@ -1,5 +1,6 @@
 import 'package:carrental/presentation/Auth/signIn_screen.dart';
-import 'package:flutter/material.dart'; 
+import 'package:carrental/presentation/Auth/signUp_screen.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      routes: {'/signUp': (context) => const SignupScreen(),
+        '/signIn': (context) => const SigninScreen(),
+      
+      },
       home: const SigninScreen(),
     );
   }
