@@ -50,7 +50,7 @@ class _SigninScreenState extends State<SigninScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset("images/fb.png", width: 30, height: 30),
+                        Image.asset("assests/images/fb.png", width: 30, height: 30),
                         Text("Facebook", style: TextStyle(fontSize: 17.5)),
                       ],
                     ),
@@ -66,7 +66,7 @@ class _SigninScreenState extends State<SigninScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset("images/google.png", width: 30, height: 30),
+                        Image.asset("assets/images/google.png", width: 30, height: 30),
                         Text("Google", style: TextStyle(fontSize: 17.5)),
                       ],
                     ),
